@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Word Count Project</title>
+</head>
+<body style="background-color: lightgray">
+    <h1>WELCOME S K GUPTA!</h1>
+    <p>Welcome to python homepage!</p>
+    <p style="color: darkgreen">{{ name }}</p>
+
+    <div class="form-row">
+        <form action="{% url 'count' %}" method="post">
+            {% csrf_token %}
+            <textarea name="completeText" cols="40" rows="10"></textarea><br>
+            <input type="submit" value="Count">
+        </form>
+
+    </div>
+</body>
+</html>
